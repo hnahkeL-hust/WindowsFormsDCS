@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48A2DD89-1F6A-44A3-AAF1-CE175585372E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsDCS</RootNamespace>
+    <AssemblyName>WindowsFormsDCS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="S7.Net, Version=0.20.0.0, Culture=neutral, PublicKeyToken=d5812d469e84c693, processorArchitecture=MSIL">
+      <HintPath>..\packages\S7netplus.0.20.0\lib\net462\S7.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Trang_chinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trang_chinh.Designer.cs">
+      <DependentUpon>Trang_chinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trang_dang_nhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trang_dang_nhap.Designer.cs">
+      <DependentUpon>Trang_dang_nhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_bc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_bc.Designer.cs">
+      <DependentUpon>uc_bc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_bc_gao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_bc_gao.Designer.cs">
+      <DependentUpon>uc_bc_gao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_bc_hoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_bc_hoa.Designer.cs">
+      <DependentUpon>uc_bc_hoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_bc_malt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_bc_malt.Designer.cs">
+      <DependentUpon>uc_bc_malt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_cd_thongso_gao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_cd_thongso_gao.Designer.cs">
+      <DependentUpon>uc_cd_thongso_gao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_cd_thongso_hoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_cd_thongso_hoa.Designer.cs">
+      <DependentUpon>uc_cd_thongso_hoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_cd_thongso_malt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_cd_thongso_malt.Designer.cs">
+      <DependentUpon>uc_cd_thongso_malt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_vh_gao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_vh_gao.Designer.cs">
+      <DependentUpon>uc_vh_gao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_vh_hoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_vh_hoa.Designer.cs">
+      <DependentUpon>uc_vh_hoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_vh_lang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_vh_lang.Designer.cs">
+      <DependentUpon>uc_vh_lang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_vh_loc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_vh_loc.Designer.cs">
+      <DependentUpon>uc_vh_loc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_vh_malt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_vh_malt.Designer.cs">
+      <DependentUpon>uc_vh_malt.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Trang_chinh.resx">
+      <DependentUpon>Trang_chinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trang_dang_nhap.resx">
+      <DependentUpon>Trang_dang_nhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_bc.resx">
+      <DependentUpon>uc_bc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_cd_thongso_gao.resx">
+      <DependentUpon>uc_cd_thongso_gao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_cd_thongso_hoa.resx">
+      <DependentUpon>uc_cd_thongso_hoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_cd_thongso_malt.resx">
+      <DependentUpon>uc_cd_thongso_malt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_vh_gao.resx">
+      <DependentUpon>uc_vh_gao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_vh_hoa.resx">
+      <DependentUpon>uc_vh_hoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_vh_lang.resx">
+      <DependentUpon>uc_vh_lang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_vh_loc.resx">
+      <DependentUpon>uc_vh_loc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_vh_malt.resx">
+      <DependentUpon>uc_vh_malt.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tank 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-D Hand control valve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-D Hand control valve90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-D Valve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Horizontal pump %28right%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Long horizontal pipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Long horizontal pipe90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Motor 18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90 curve 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90curve 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90curve 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90curve 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Digital indicator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-D Hand control valve180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-D Hand control valve270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-D Valve180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Horizontal pump %28right%29flip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crude unit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_2026-01-13_013536-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-D Gate valve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple pump 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-D Valve90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cool pump.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cool pump1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ISA Agitator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
